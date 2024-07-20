@@ -1,0 +1,19 @@
+type Query {
+    allUsers:[User],
+    userById(id:Int) : User
+}
+
+type Mutation {
+    saveUser(userRequest: UserRequest) : User
+}
+
+type User {
+    id: Int,
+    name: String,
+    email: String
+}
+
+input UserRequest {
+    name :  String,
+    email : String
+}
